@@ -1,0 +1,198 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AcctABC	abc.h	/^		AcctABC(std::string name="nullbody", long no=-1, double b=0.0):fullName(name),number(no),balance(b) {}$/;"	f	language:C++	class:AcctABC	access:public	signature:(std::string name=Ó, long no=-1, double b=0.0)
+AcctABC	abc.h	/^class AcctABC$/;"	c	language:C++
+AcctABC::AcctABC	abc.h	/^		AcctABC(std::string name="nullbody", long no=-1, double b=0.0):fullName(name),number(no),balance(b) {}$/;"	f	language:C++	class:AcctABC	access:public	signature:(std::string name=Ó, long no=-1, double b=0.0)
+AcctABC::balance	abc.h	/^		double balance;$/;"	m	language:C++	class:AcctABC	access:private
+AcctABC::deposit	abc.cpp	/^void AcctABC::deposit(double amt)$/;"	f	language:C++	class:AcctABC	signature:(double amt)
+AcctABC::deposit	abc.h	/^		void deposit(double amt);$/;"	p	language:C++	class:AcctABC	access:public	signature:(double amt)
+AcctABC::fullName	abc.h	/^		std::string fullName;$/;"	m	language:C++	class:AcctABC	access:private
+AcctABC::getbalance	abc.h	/^		double getbalance() const { return balance; }$/;"	f	language:C++	class:AcctABC	access:public	signature:() const
+AcctABC::getname	abc.h	/^		const std::string & getname() const {return fullName;}$/;"	f	language:C++	class:AcctABC	access:protected	signature:() const
+AcctABC::getnumber	abc.h	/^		long getnumber() const {return number;}$/;"	f	language:C++	class:AcctABC	access:protected	signature:() const
+AcctABC::number	abc.h	/^		long number;$/;"	m	language:C++	class:AcctABC	access:private
+AcctABC::viewAcct	abc.h	/^		virtual void viewAcct() const =0;$/;"	p	language:C++	class:AcctABC	access:public	signature:() const
+AcctABC::withDraw	abc.cpp	/^void AcctABC::withDraw(double amt)$/;"	f	language:C++	class:AcctABC	signature:(double amt)
+AcctABC::withDraw	abc.h	/^		virtual void withDraw(double amt) =0;$/;"	p	language:C++	class:AcctABC	access:public	signature:(double amt)
+AcctABC::~AcctABC	abc.h	/^		virtual ~AcctABC() {}$/;"	f	language:C++	class:AcctABC	access:public	signature:()
+Brass	abc.h	/^		Brass(std::string name="nullbody", long no=-1, double b=0.0):AcctABC(name,no,b) {}$/;"	f	language:C++	class:Brass	access:public	signature:(std::string name=Ó, long no=-1, double b=0.0)
+Brass	abc.h	/^class Brass : public AcctABC$/;"	c	language:C++	inherits:AcctABC
+Brass::Brass	abc.h	/^		Brass(std::string name="nullbody", long no=-1, double b=0.0):AcctABC(name,no,b) {}$/;"	f	language:C++	class:Brass	access:public	signature:(std::string name=Ó, long no=-1, double b=0.0)
+Brass::viewAcct	abc.cpp	/^void Brass::viewAcct() const$/;"	f	language:C++	class:Brass	signature:() const
+Brass::viewAcct	abc.h	/^		virtual void viewAcct() const;$/;"	p	language:C++	class:Brass	access:public	signature:() const
+Brass::withDraw	abc.cpp	/^void Brass::withDraw(double amt)$/;"	f	language:C++	class:Brass	signature:(double amt)
+Brass::withDraw	abc.h	/^		virtual void withDraw(double amt);$/;"	p	language:C++	class:Brass	access:public	signature:(double amt)
+Brass::~Brass	abc.h	/^		virtual ~Brass() {}$/;"	f	language:C++	class:Brass	access:public	signature:()
+BrassPlus	abc.h	/^		BrassPlus(const Brass & b, double ml=500, double r=0.1):AcctABC(b),maxLoan(ml),rate(r) {ownsBank=0.0;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:(const Brass & b, double ml=500, double r=0.1)
+BrassPlus	abc.h	/^		BrassPlus(std::string name="nullbody", long no=-1, double b=0.0, double ml=500, double r=0.1):AcctABC(name,no,b),maxLoan(ml),rate(r) {ownsBank=0.0;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:(std::string name=Ó, long no=-1, double b=0.0, double ml=500, double r=0.1)
+BrassPlus	abc.h	/^class BrassPlus : public AcctABC$/;"	c	language:C++	inherits:AcctABC
+BrassPlus::BrassPlus	abc.h	/^		BrassPlus(const Brass & b, double ml=500, double r=0.1):AcctABC(b),maxLoan(ml),rate(r) {ownsBank=0.0;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:(const Brass & b, double ml=500, double r=0.1)
+BrassPlus::BrassPlus	abc.h	/^		BrassPlus(std::string name="nullbody", long no=-1, double b=0.0, double ml=500, double r=0.1):AcctABC(name,no,b),maxLoan(ml),rate(r) {ownsBank=0.0;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:(std::string name=Ó, long no=-1, double b=0.0, double ml=500, double r=0.1)
+BrassPlus::maxLoan	abc.h	/^		double maxLoan;$/;"	m	language:C++	class:BrassPlus	access:private
+BrassPlus::ownsBank	abc.h	/^		double ownsBank;$/;"	m	language:C++	class:BrassPlus	access:private
+BrassPlus::rate	abc.h	/^		double rate;$/;"	m	language:C++	class:BrassPlus	access:private
+BrassPlus::resetmax	abc.h	/^		void resetmax(double ml) {maxLoan = ml;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:(double ml)
+BrassPlus::resetowns	abc.h	/^		void resetowns() {ownsBank = 0.0;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:()
+BrassPlus::resetrate	abc.h	/^		void resetrate(double r) {rate = r;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:(double r)
+BrassPlus::viewAcct	abc.cpp	/^void BrassPlus::viewAcct() const$/;"	f	language:C++	class:BrassPlus	signature:() const
+BrassPlus::viewAcct	abc.h	/^		virtual void viewAcct() const;$/;"	p	language:C++	class:BrassPlus	access:public	signature:() const
+BrassPlus::withDraw	abc.cpp	/^void BrassPlus::withDraw(double amt)$/;"	f	language:C++	class:BrassPlus	signature:(double amt)
+BrassPlus::withDraw	abc.h	/^		virtual void withDraw(double amt);$/;"	p	language:C++	class:BrassPlus	access:public	signature:(double amt)
+BrassPlus::~BrassPlus	abc.h	/^		virtual ~BrassPlus() {}$/;"	f	language:C++	class:BrassPlus	access:public	signature:()
+CLIENT	test.cpp	/^const int CLIENT = 4;$/;"	v	language:C++
+CLINT_NUMS	abc.cpp	/^const int CLINT_NUMS = 4;$/;"	v	language:C++
+MAX_LEN	dma.h	/^		enum {MAX_LEN = 40};$/;"	e	language:C++	enum:lacksDMA::__anon1
+__ABC_H__	abc.h	2;"	d	language:C++
+__DMA_H__	dma.h	2;"	d	language:C++
+balance	abc.h	/^		double balance;$/;"	m	language:C++	class:AcctABC	access:private
+baseDMA	dma.cpp	/^baseDMA::baseDMA(const baseDMA & b)$/;"	f	language:C++	class:baseDMA	signature:(const baseDMA & b)
+baseDMA	dma.cpp	/^baseDMA::baseDMA(const char *l, int r)$/;"	f	language:C++	class:baseDMA	signature:(const char *l, int r)
+baseDMA	dma.h	/^		baseDMA(const baseDMA &);$/;"	p	language:C++	class:baseDMA	access:public	signature:(const baseDMA &)
+baseDMA	dma.h	/^		baseDMA(const char *l = "null", int r = 0);$/;"	p	language:C++	class:baseDMA	access:public	signature:(const char *l = Ó, int r = 0)
+baseDMA	dma.h	/^class baseDMA$/;"	c	language:C++
+baseDMA	test.cpp	/^		baseDMA(const baseDMA & b);$/;"	p	language:C++	class:baseDMA	file:	access:public	signature:(const baseDMA & b)
+baseDMA	test.cpp	/^		baseDMA(const char *m = "null", int r = 0);$/;"	p	language:C++	class:baseDMA	file:	access:public	signature:(const char *m = Ó, int r = 0)
+baseDMA	test.cpp	/^baseDMA::baseDMA(const baseDMA & b) {$/;"	f	language:C++	class:baseDMA	signature:(const baseDMA & b)
+baseDMA	test.cpp	/^baseDMA::baseDMA(const char *m, int r) {$/;"	f	language:C++	class:baseDMA	signature:(const char *m, int r)
+baseDMA	test.cpp	/^class baseDMA $/;"	c	language:C++	file:
+baseDMA::baseDMA	dma.cpp	/^baseDMA::baseDMA(const baseDMA & b)$/;"	f	language:C++	class:baseDMA	signature:(const baseDMA & b)
+baseDMA::baseDMA	dma.cpp	/^baseDMA::baseDMA(const char *l, int r)$/;"	f	language:C++	class:baseDMA	signature:(const char *l, int r)
+baseDMA::baseDMA	dma.h	/^		baseDMA(const baseDMA &);$/;"	p	language:C++	class:baseDMA	access:public	signature:(const baseDMA &)
+baseDMA::baseDMA	dma.h	/^		baseDMA(const char *l = "null", int r = 0);$/;"	p	language:C++	class:baseDMA	access:public	signature:(const char *l = Ó, int r = 0)
+baseDMA::baseDMA	test.cpp	/^		baseDMA(const baseDMA & b);$/;"	p	language:C++	class:baseDMA	file:	access:public	signature:(const baseDMA & b)
+baseDMA::baseDMA	test.cpp	/^		baseDMA(const char *m = "null", int r = 0);$/;"	p	language:C++	class:baseDMA	file:	access:public	signature:(const char *m = Ó, int r = 0)
+baseDMA::baseDMA	test.cpp	/^baseDMA::baseDMA(const baseDMA & b) {$/;"	f	language:C++	class:baseDMA	signature:(const baseDMA & b)
+baseDMA::baseDMA	test.cpp	/^baseDMA::baseDMA(const char *m, int r) {$/;"	f	language:C++	class:baseDMA	signature:(const char *m, int r)
+baseDMA::label	dma.h	/^		char *label;$/;"	m	language:C++	class:baseDMA	access:private
+baseDMA::label	test.cpp	/^		char *label;$/;"	m	language:C++	class:baseDMA	file:	access:private
+baseDMA::operator <<	dma.h	/^		friend std::ostream & operator<<(std::ostream & o, const baseDMA &b);$/;"	p	language:C++	class:baseDMA	access:friend	signature:(std::ostream & o, const baseDMA &b)
+baseDMA::operator <<	test.cpp	/^		friend ostream & operator<<(ostream & os, const baseDMA & bs);$/;"	p	language:C++	class:baseDMA	file:	access:friend	signature:(ostream & os, const baseDMA & bs)
+baseDMA::operator =	dma.cpp	/^baseDMA & baseDMA::operator=(const baseDMA &b)$/;"	f	language:C++	class:baseDMA	signature:(const baseDMA &b)
+baseDMA::operator =	dma.h	/^		baseDMA & operator=(const baseDMA &);$/;"	p	language:C++	class:baseDMA	access:public	signature:(const baseDMA &)
+baseDMA::operator =	test.cpp	/^		baseDMA & operator=(const baseDMA & b);$/;"	p	language:C++	class:baseDMA	file:	access:public	signature:(const baseDMA & b)
+baseDMA::operator =	test.cpp	/^baseDMA & baseDMA::operator=(const baseDMA & b)$/;"	f	language:C++	class:baseDMA	signature:(const baseDMA & b)
+baseDMA::rate	dma.h	/^		int rate;$/;"	m	language:C++	class:baseDMA	access:private
+baseDMA::rating	test.cpp	/^		int rating;$/;"	m	language:C++	class:baseDMA	file:	access:private
+baseDMA::~baseDMA	dma.cpp	/^baseDMA::~baseDMA()$/;"	f	language:C++	class:baseDMA	signature:()
+baseDMA::~baseDMA	dma.h	/^		virtual ~baseDMA();$/;"	p	language:C++	class:baseDMA	access:public	signature:()
+baseDMA::~baseDMA	test.cpp	/^		virtual ~baseDMA() {delete [] label;}$/;"	f	language:C++	class:baseDMA	access:public	signature:()
+color	dma.h	/^		char color[MAX_LEN];$/;"	m	language:C++	class:lacksDMA	access:private
+color	test.cpp	/^		char color[16];$/;"	m	language:C++	class:lacksDMA	file:	access:private
+deposit	abc.cpp	/^void AcctABC::deposit(double amt)$/;"	f	language:C++	class:AcctABC	signature:(double amt)
+deposit	abc.h	/^		void deposit(double amt);$/;"	p	language:C++	class:AcctABC	access:public	signature:(double amt)
+fullName	abc.h	/^		std::string fullName;$/;"	m	language:C++	class:AcctABC	access:private
+getbalance	abc.h	/^		double getbalance() const { return balance; }$/;"	f	language:C++	class:AcctABC	access:public	signature:() const
+getname	abc.h	/^		const std::string & getname() const {return fullName;}$/;"	f	language:C++	class:AcctABC	access:protected	signature:() const
+getnumber	abc.h	/^		long getnumber() const {return number;}$/;"	f	language:C++	class:AcctABC	access:protected	signature:() const
+hasDMA	dma.cpp	/^hasDMA::hasDMA(const char *s, const baseDMA &b):baseDMA(b)$/;"	f	language:C++	class:hasDMA	signature:(const char *s, const baseDMA &b)
+hasDMA	dma.cpp	/^hasDMA::hasDMA(const char *s, const char *l, int r):baseDMA(l,r)$/;"	f	language:C++	class:hasDMA	signature:(const char *s, const char *l, int r)
+hasDMA	dma.cpp	/^hasDMA::hasDMA(const hasDMA &h):baseDMA(h)$/;"	f	language:C++	class:hasDMA	signature:(const hasDMA &h)
+hasDMA	dma.h	/^		hasDMA(const char *s , const baseDMA &b);$/;"	p	language:C++	class:hasDMA	access:public	signature:(const char *s , const baseDMA &b)
+hasDMA	dma.h	/^		hasDMA(const char *s = "none", const char *l = "null", int r = 0);$/;"	p	language:C++	class:hasDMA	access:public	signature:(const char *s = Ó, const char *l = Ó, int r = 0)
+hasDMA	dma.h	/^		hasDMA(const hasDMA &);$/;"	p	language:C++	class:hasDMA	access:public	signature:(const hasDMA &)
+hasDMA	dma.h	/^class hasDMA : public baseDMA$/;"	c	language:C++	inherits:baseDMA
+hasDMA	test.cpp	/^		hasDMA(const char * m = "NULL", int r = 0, const char *s = "red");$/;"	p	language:C++	class:hasDMA	file:	access:public	signature:(const char * m = Ó, int r = 0, const char *s = Ó)
+hasDMA	test.cpp	/^		hasDMA(const hasDMA & hs);$/;"	p	language:C++	class:hasDMA	file:	access:public	signature:(const hasDMA & hs)
+hasDMA	test.cpp	/^class hasDMA : public baseDMA$/;"	c	language:C++	file:	inherits:baseDMA
+hasDMA	test.cpp	/^hasDMA::hasDMA(const char *m, int r, const char *s):baseDMA(m,r)$/;"	f	language:C++	class:hasDMA	signature:(const char *m, int r, const char *s)
+hasDMA	test.cpp	/^hasDMA::hasDMA(const hasDMA & hs) :baseDMA(hs)$/;"	f	language:C++	class:hasDMA	signature:(const hasDMA & hs)
+hasDMA::hasDMA	dma.cpp	/^hasDMA::hasDMA(const char *s, const baseDMA &b):baseDMA(b)$/;"	f	language:C++	class:hasDMA	signature:(const char *s, const baseDMA &b)
+hasDMA::hasDMA	dma.cpp	/^hasDMA::hasDMA(const char *s, const char *l, int r):baseDMA(l,r)$/;"	f	language:C++	class:hasDMA	signature:(const char *s, const char *l, int r)
+hasDMA::hasDMA	dma.cpp	/^hasDMA::hasDMA(const hasDMA &h):baseDMA(h)$/;"	f	language:C++	class:hasDMA	signature:(const hasDMA &h)
+hasDMA::hasDMA	dma.h	/^		hasDMA(const char *s , const baseDMA &b);$/;"	p	language:C++	class:hasDMA	access:public	signature:(const char *s , const baseDMA &b)
+hasDMA::hasDMA	dma.h	/^		hasDMA(const char *s = "none", const char *l = "null", int r = 0);$/;"	p	language:C++	class:hasDMA	access:public	signature:(const char *s = Ó, const char *l = Ó, int r = 0)
+hasDMA::hasDMA	dma.h	/^		hasDMA(const hasDMA &);$/;"	p	language:C++	class:hasDMA	access:public	signature:(const hasDMA &)
+hasDMA::hasDMA	test.cpp	/^		hasDMA(const char * m = "NULL", int r = 0, const char *s = "red");$/;"	p	language:C++	class:hasDMA	file:	access:public	signature:(const char * m = Ó, int r = 0, const char *s = Ó)
+hasDMA::hasDMA	test.cpp	/^		hasDMA(const hasDMA & hs);$/;"	p	language:C++	class:hasDMA	file:	access:public	signature:(const hasDMA & hs)
+hasDMA::hasDMA	test.cpp	/^hasDMA::hasDMA(const char *m, int r, const char *s):baseDMA(m,r)$/;"	f	language:C++	class:hasDMA	signature:(const char *m, int r, const char *s)
+hasDMA::hasDMA	test.cpp	/^hasDMA::hasDMA(const hasDMA & hs) :baseDMA(hs)$/;"	f	language:C++	class:hasDMA	signature:(const hasDMA & hs)
+hasDMA::operator <<	dma.h	/^		friend std::ostream & operator<<(std::ostream & o, const hasDMA & h);$/;"	p	language:C++	class:hasDMA	access:friend	signature:(std::ostream & o, const hasDMA & h)
+hasDMA::operator <<	test.cpp	/^		friend ostream & operator<<(ostream & os, const hasDMA & hs);$/;"	p	language:C++	class:hasDMA	file:	access:friend	signature:(ostream & os, const hasDMA & hs)
+hasDMA::operator =	dma.cpp	/^hasDMA & hasDMA::operator=(const hasDMA &h)$/;"	f	language:C++	class:hasDMA	signature:(const hasDMA &h)
+hasDMA::operator =	dma.h	/^		hasDMA & operator=(const hasDMA &);$/;"	p	language:C++	class:hasDMA	access:public	signature:(const hasDMA &)
+hasDMA::operator =	test.cpp	/^		hasDMA & operator=(const hasDMA & hs);$/;"	p	language:C++	class:hasDMA	file:	access:public	signature:(const hasDMA & hs)
+hasDMA::operator =	test.cpp	/^hasDMA & hasDMA::operator=(const hasDMA & hs)$/;"	f	language:C++	class:hasDMA	signature:(const hasDMA & hs)
+hasDMA::style	dma.h	/^		char *style;$/;"	m	language:C++	class:hasDMA	access:private
+hasDMA::style	test.cpp	/^		char *style;$/;"	m	language:C++	class:hasDMA	file:	access:private
+hasDMA::~hasDMA	dma.cpp	/^hasDMA::~hasDMA()$/;"	f	language:C++	class:hasDMA	signature:()
+hasDMA::~hasDMA	dma.h	/^		virtual ~hasDMA();$/;"	p	language:C++	class:hasDMA	access:public	signature:()
+hasDMA::~hasDMA	test.cpp	/^		virtual ~hasDMA() { delete [] style;}$/;"	f	language:C++	class:hasDMA	access:public	signature:()
+label	dma.h	/^		char *label;$/;"	m	language:C++	class:baseDMA	access:private
+label	test.cpp	/^		char *label;$/;"	m	language:C++	class:baseDMA	file:	access:private
+lacksDMA	dma.cpp	/^lacksDMA::lacksDMA(const char *c, const baseDMA &b):baseDMA(b)$/;"	f	language:C++	class:lacksDMA	signature:(const char *c, const baseDMA &b)
+lacksDMA	dma.cpp	/^lacksDMA::lacksDMA(const char *c, const char *l, int r):baseDMA(l,r)$/;"	f	language:C++	class:lacksDMA	signature:(const char *c, const char *l, int r)
+lacksDMA	dma.h	/^		lacksDMA(const char *c , const baseDMA & b);$/;"	p	language:C++	class:lacksDMA	access:public	signature:(const char *c , const baseDMA & b)
+lacksDMA	dma.h	/^		lacksDMA(const char *c = "black", const char *l = "null", int r = 0);$/;"	p	language:C++	class:lacksDMA	access:public	signature:(const char *c = Ó, const char *l = Ó, int r = 0)
+lacksDMA	dma.h	/^class lacksDMA : public baseDMA$/;"	c	language:C++	inherits:baseDMA
+lacksDMA	test.cpp	/^		lacksDMA(const baseDMA & bs, const char *c = "red"):baseDMA(bs) {strncpy(color, c, 15);}$/;"	f	language:C++	class:lacksDMA	access:public	signature:(const baseDMA & bs, const char *c = Ó)
+lacksDMA	test.cpp	/^		lacksDMA(const char *m = "null", int r = 0, const char * c = "red"):baseDMA(m, r) {strncpy(color, c, 15);}$/;"	f	language:C++	class:lacksDMA	access:public	signature:(const char *m = Ó, int r = 0, const char * c = Ó)
+lacksDMA	test.cpp	/^class lacksDMA : public baseDMA$/;"	c	language:C++	file:	inherits:baseDMA
+lacksDMA::MAX_LEN	dma.h	/^		enum {MAX_LEN = 40};$/;"	e	language:C++	enum:lacksDMA::__anon1
+lacksDMA::color	dma.h	/^		char color[MAX_LEN];$/;"	m	language:C++	class:lacksDMA	access:private
+lacksDMA::color	test.cpp	/^		char color[16];$/;"	m	language:C++	class:lacksDMA	file:	access:private
+lacksDMA::lacksDMA	dma.cpp	/^lacksDMA::lacksDMA(const char *c, const baseDMA &b):baseDMA(b)$/;"	f	language:C++	class:lacksDMA	signature:(const char *c, const baseDMA &b)
+lacksDMA::lacksDMA	dma.cpp	/^lacksDMA::lacksDMA(const char *c, const char *l, int r):baseDMA(l,r)$/;"	f	language:C++	class:lacksDMA	signature:(const char *c, const char *l, int r)
+lacksDMA::lacksDMA	dma.h	/^		lacksDMA(const char *c , const baseDMA & b);$/;"	p	language:C++	class:lacksDMA	access:public	signature:(const char *c , const baseDMA & b)
+lacksDMA::lacksDMA	dma.h	/^		lacksDMA(const char *c = "black", const char *l = "null", int r = 0);$/;"	p	language:C++	class:lacksDMA	access:public	signature:(const char *c = Ó, const char *l = Ó, int r = 0)
+lacksDMA::lacksDMA	test.cpp	/^		lacksDMA(const baseDMA & bs, const char *c = "red"):baseDMA(bs) {strncpy(color, c, 15);}$/;"	f	language:C++	class:lacksDMA	access:public	signature:(const baseDMA & bs, const char *c = Ó)
+lacksDMA::lacksDMA	test.cpp	/^		lacksDMA(const char *m = "null", int r = 0, const char * c = "red"):baseDMA(m, r) {strncpy(color, c, 15);}$/;"	f	language:C++	class:lacksDMA	access:public	signature:(const char *m = Ó, int r = 0, const char * c = Ó)
+lacksDMA::operator <<	dma.h	/^		friend std::ostream & operator<<(std::ostream & o, const lacksDMA &l);$/;"	p	language:C++	class:lacksDMA	access:friend	signature:(std::ostream & o, const lacksDMA &l)
+lacksDMA::operator <<	test.cpp	/^		friend ostream & operator<<(ostream & os, const lacksDMA & ls);$/;"	p	language:C++	class:lacksDMA	file:	access:friend	signature:(ostream & os, const lacksDMA & ls)
+main	abc.cpp	/^int main()$/;"	f	language:C++	signature:()
+main	dma.cpp	/^int main()$/;"	f	language:C++	signature:()
+main	test.cpp	/^int main() {$/;"	f	language:C++	signature:()
+maxLoan	abc.h	/^		double maxLoan;$/;"	m	language:C++	class:BrassPlus	access:private
+number	abc.h	/^		long number;$/;"	m	language:C++	class:AcctABC	access:private
+operator <<	dma.cpp	/^std::ostream & operator<<(std::ostream & o, const baseDMA & b)$/;"	f	language:C++	signature:(std::ostream & o, const baseDMA & b)
+operator <<	dma.cpp	/^std::ostream & operator<<(std::ostream & o, const hasDMA & h)$/;"	f	language:C++	signature:(std::ostream & o, const hasDMA & h)
+operator <<	dma.cpp	/^std::ostream & operator<<(std::ostream & o, const lacksDMA & l)$/;"	f	language:C++	signature:(std::ostream & o, const lacksDMA & l)
+operator <<	dma.h	/^		friend std::ostream & operator<<(std::ostream & o, const baseDMA &b);$/;"	p	language:C++	class:baseDMA	access:friend	signature:(std::ostream & o, const baseDMA &b)
+operator <<	dma.h	/^		friend std::ostream & operator<<(std::ostream & o, const hasDMA & h);$/;"	p	language:C++	class:hasDMA	access:friend	signature:(std::ostream & o, const hasDMA & h)
+operator <<	dma.h	/^		friend std::ostream & operator<<(std::ostream & o, const lacksDMA &l);$/;"	p	language:C++	class:lacksDMA	access:friend	signature:(std::ostream & o, const lacksDMA &l)
+operator <<	test.cpp	/^		friend ostream & operator<<(ostream & os, const baseDMA & bs);$/;"	p	language:C++	class:baseDMA	file:	access:friend	signature:(ostream & os, const baseDMA & bs)
+operator <<	test.cpp	/^		friend ostream & operator<<(ostream & os, const hasDMA & hs);$/;"	p	language:C++	class:hasDMA	file:	access:friend	signature:(ostream & os, const hasDMA & hs)
+operator <<	test.cpp	/^		friend ostream & operator<<(ostream & os, const lacksDMA & ls);$/;"	p	language:C++	class:lacksDMA	file:	access:friend	signature:(ostream & os, const lacksDMA & ls)
+operator <<	test.cpp	/^ostream & operator<<(ostream & os, const baseDMA & bs)$/;"	f	language:C++	signature:(ostream & os, const baseDMA & bs)
+operator <<	test.cpp	/^ostream & operator<<(ostream & os, const hasDMA & hs)$/;"	f	language:C++	signature:(ostream & os, const hasDMA & hs)
+operator <<	test.cpp	/^ostream & operator<<(ostream & os, const lacksDMA & ls)$/;"	f	language:C++	signature:(ostream & os, const lacksDMA & ls)
+operator =	dma.cpp	/^baseDMA & baseDMA::operator=(const baseDMA &b)$/;"	f	language:C++	class:baseDMA	signature:(const baseDMA &b)
+operator =	dma.cpp	/^hasDMA & hasDMA::operator=(const hasDMA &h)$/;"	f	language:C++	class:hasDMA	signature:(const hasDMA &h)
+operator =	dma.h	/^		baseDMA & operator=(const baseDMA &);$/;"	p	language:C++	class:baseDMA	access:public	signature:(const baseDMA &)
+operator =	dma.h	/^		hasDMA & operator=(const hasDMA &);$/;"	p	language:C++	class:hasDMA	access:public	signature:(const hasDMA &)
+operator =	test.cpp	/^		baseDMA & operator=(const baseDMA & b);$/;"	p	language:C++	class:baseDMA	file:	access:public	signature:(const baseDMA & b)
+operator =	test.cpp	/^		hasDMA & operator=(const hasDMA & hs);$/;"	p	language:C++	class:hasDMA	file:	access:public	signature:(const hasDMA & hs)
+operator =	test.cpp	/^baseDMA & baseDMA::operator=(const baseDMA & b)$/;"	f	language:C++	class:baseDMA	signature:(const baseDMA & b)
+operator =	test.cpp	/^hasDMA & hasDMA::operator=(const hasDMA & hs)$/;"	f	language:C++	class:hasDMA	signature:(const hasDMA & hs)
+ownsBank	abc.h	/^		double ownsBank;$/;"	m	language:C++	class:BrassPlus	access:private
+rate	abc.h	/^		double rate;$/;"	m	language:C++	class:BrassPlus	access:private
+rate	dma.h	/^		int rate;$/;"	m	language:C++	class:baseDMA	access:private
+rating	test.cpp	/^		int rating;$/;"	m	language:C++	class:baseDMA	file:	access:private
+resetmax	abc.h	/^		void resetmax(double ml) {maxLoan = ml;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:(double ml)
+resetowns	abc.h	/^		void resetowns() {ownsBank = 0.0;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:()
+resetrate	abc.h	/^		void resetrate(double r) {rate = r;}$/;"	f	language:C++	class:BrassPlus	access:public	signature:(double r)
+style	dma.h	/^		char *style;$/;"	m	language:C++	class:hasDMA	access:private
+style	test.cpp	/^		char *style;$/;"	m	language:C++	class:hasDMA	file:	access:private
+viewAcct	abc.cpp	/^void Brass::viewAcct() const$/;"	f	language:C++	class:Brass	signature:() const
+viewAcct	abc.cpp	/^void BrassPlus::viewAcct() const$/;"	f	language:C++	class:BrassPlus	signature:() const
+viewAcct	abc.h	/^		virtual void viewAcct() const =0;$/;"	p	language:C++	class:AcctABC	access:public	signature:() const
+viewAcct	abc.h	/^		virtual void viewAcct() const;$/;"	p	language:C++	class:Brass	access:public	signature:() const
+viewAcct	abc.h	/^		virtual void viewAcct() const;$/;"	p	language:C++	class:BrassPlus	access:public	signature:() const
+withDraw	abc.cpp	/^void AcctABC::withDraw(double amt)$/;"	f	language:C++	class:AcctABC	signature:(double amt)
+withDraw	abc.cpp	/^void Brass::withDraw(double amt)$/;"	f	language:C++	class:Brass	signature:(double amt)
+withDraw	abc.cpp	/^void BrassPlus::withDraw(double amt)$/;"	f	language:C++	class:BrassPlus	signature:(double amt)
+withDraw	abc.h	/^		virtual void withDraw(double amt) =0;$/;"	p	language:C++	class:AcctABC	access:public	signature:(double amt)
+withDraw	abc.h	/^		virtual void withDraw(double amt);$/;"	p	language:C++	class:Brass	access:public	signature:(double amt)
+withDraw	abc.h	/^		virtual void withDraw(double amt);$/;"	p	language:C++	class:BrassPlus	access:public	signature:(double amt)
+~AcctABC	abc.h	/^		virtual ~AcctABC() {}$/;"	f	language:C++	class:AcctABC	access:public	signature:()
+~Brass	abc.h	/^		virtual ~Brass() {}$/;"	f	language:C++	class:Brass	access:public	signature:()
+~BrassPlus	abc.h	/^		virtual ~BrassPlus() {}$/;"	f	language:C++	class:BrassPlus	access:public	signature:()
+~baseDMA	dma.cpp	/^baseDMA::~baseDMA()$/;"	f	language:C++	class:baseDMA	signature:()
+~baseDMA	dma.h	/^		virtual ~baseDMA();$/;"	p	language:C++	class:baseDMA	access:public	signature:()
+~baseDMA	test.cpp	/^		virtual ~baseDMA() {delete [] label;}$/;"	f	language:C++	class:baseDMA	access:public	signature:()
+~hasDMA	dma.cpp	/^hasDMA::~hasDMA()$/;"	f	language:C++	class:hasDMA	signature:()
+~hasDMA	dma.h	/^		virtual ~hasDMA();$/;"	p	language:C++	class:hasDMA	access:public	signature:()
+~hasDMA	test.cpp	/^		virtual ~hasDMA() { delete [] style;}$/;"	f	language:C++	class:hasDMA	access:public	signature:()
