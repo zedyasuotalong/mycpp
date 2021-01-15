@@ -2,6 +2,7 @@
 #include <string>
 #include <cstring>
 #include <cmath>
+//ssssssssssssssss
 enum SHENG {JIANGSU,YANCHENG};
 enum class SHI {ASD,YANCHENG};
 class Stock
